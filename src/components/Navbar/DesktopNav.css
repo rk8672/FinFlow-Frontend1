@@ -1,0 +1,151 @@
+
+/* NavigationBar.css */
+.minimize-button {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.32);
+  border-radius: 10px 0px 0px 10px;
+  color: rgb(11, 11, 11);
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Styles for the main sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgb(6, 6, 6);
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  transition: width 0.3s; 
+}
+
+/* Add this rule to set the width in the minimized state */
+.sidebar.sidebar-minimized {
+  width: 80px;
+}
+
+.logo {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content:flex-start ;
+}
+
+.link {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  transition: padding 0.3s; /* Add a transition for smooth padding changes */
+}
+
+.link.active {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(254, 255, 255);
+  justify-content: center;
+  transition: padding 0.3s; /* Add a transition for smooth padding changes */
+}
+
+/* Styles for the internal navigation bar */
+.internal-nav {
+  position: fixed;
+  top: 0;
+  left: 65px; /* Adjust this value to fit your design */
+  width: 200px; /* Adjust the width as needed */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s;
+}
+
+/* Add this rule to set the width in the minimized state */
+.internal-nav.minimized {
+  width: 70px; /* Adjust to the desired width */
+}
+
+.internal-link {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  margin: 0px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  justify-content: flex-start; /* Align links to the right */
+  overflow: hidden; /* Hide text overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  position: relative;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.internal-link.active {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  margin: 0px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  border-right: 3px solid #D81B2A;
+  background: linear-gradient(to right, #FCEFF0, #FBF9F9);
+  justify-content: flex-start; /* Align text from left to right */
+  overflow: hidden; /* Hide text overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-top: 2px;
+  margin-bottom: 2px;
+  box-shadow: 1px 1px 2px rgba(136, 136, 136,0.5);
+}
+
+/* Additional styles for the content area */
+.content {
+  padding-left: 55px !important;
+  transition: margin-left 0.3s, transform 0.3s; /* Add transitions for smooth margin and transform changes */
+  margin-left: 0px;
+  transform: translateX(0); /* Initially, not shifted */
+}
+
+/* Add this rule to adjust the margin when the internal nav is open */
+.content.content-internal-nav-open {
+  margin-left: 200px; /* Adjust the margin for an open internal nav */
+  transform: translateX(0); /* No shift when open */
+}
+
+.content.content-internal-nav-open.content-internal-nav-open-minimized {
+  margin-left: 70px; /* Adjust the margin for an open internal nav */
+  transform: translateX(0); /* No shift when open */
+}
