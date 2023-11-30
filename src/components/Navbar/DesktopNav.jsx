@@ -31,7 +31,7 @@ import NewPaymentSupplier from "../../images/credit-card.png"
 import AllSupplier from "../../images/group (1).png"
 
 //All Products
-import AllProducts from "../../images/inventory.png"
+//import AllProducts from "../../images/inventory.png"
 
 
 
@@ -151,7 +151,7 @@ const InternalNavBarProfile = ({ commonMinimized, toggleCommonMinimized, interna
       </div>
       <div className="nav-links2 mt-4 ">
         <NavLink to="/product/newProductForm" className="internal-link">
-          <img src={AllProducts} alt="Home" style={{ width: '20px', height: 'auto' }} className='m-3' />
+          <img src={Product} alt="Home" style={{ width: '20px', height: 'auto' }} className='m-3' />
           {!commonMinimized && 'Products'}
         </NavLink>
       
@@ -183,7 +183,7 @@ const InternalNavBarHome = ({ commonMinimized, toggleCommonMinimized, internalNa
       </div>
       <div className="nav-links2 mt-4  ">
         <NavLink to="/home" className="internal-link shadow">
-          <img src={AllProducts} alt="Home" style={{ width: '20px', height: 'auto' }} className='m-3' />
+          <img src={Product} alt="Home" style={{ width: '20px', height: 'auto' }} className='m-3' />
           {!commonMinimized && 'Dashboard'}
         </NavLink>
        
