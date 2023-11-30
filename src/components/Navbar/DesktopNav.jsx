@@ -18,7 +18,7 @@ import Home from "../../images/home (2).png"
 import Purchase from "../../images/express-delivery.png"
 import Product from "../../images/Purchase.png"
 import Logout from "../../images/power-off.png"
-import Dashboard from "../../images/Dashboard.png"
+//import Dashboard from "../../images/Dashboard.png"
 //Sales Customer Icon
 import NewCustomer from"../../images/new customer.png"
 import AllCustomer from "../../images/people.png"
@@ -183,7 +183,7 @@ const InternalNavBarHome = ({ commonMinimized, toggleCommonMinimized, internalNa
       </div>
       <div className="nav-links2 mt-4  ">
         <NavLink to="/home" className="internal-link shadow">
-          <img src={Dashboard} alt="Home" style={{ width: '20px', height: 'auto' }} className='m-3' />
+          <img src={AllProducts} alt="Home" style={{ width: '20px', height: 'auto' }} className='m-3' />
           {!commonMinimized && 'Dashboard'}
         </NavLink>
        
